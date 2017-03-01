@@ -16,10 +16,6 @@
     <Import>http://sweet.jpl.nasa.gov/2.3/reprDataProduct.owl</Import>
     <Import>https://raw.githubusercontent.com/mudrod/mudrod_ontologies/master/dif_v10.2.owl</Import>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0.1</Literal>
-    </Annotation>
-    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">podaacDatasets.owl is an extension of the SWEET (http://sweet.jpl.nasa.gov) https://sweet.jpl.nasa.gov/2.3/reprDataProduct.owl#Dataset class which uses the Directory Interchange Format (DIF) content metadata, a specific set of attributes for describing Earth science data. Currently DIF is used at NASA JPL&apos;s PO.DAAC to model oceanographic datasets. The DIF specification provides the data model which we use to described individual instances of https://sweet.jpl.nasa.gov/2.3/reprDataProduct.owl#Dataset.</Literal>
     </Annotation>
@@ -32,6 +28,9 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">https://github.com/mudrod/mudrod_ontologies</Literal>
     </Annotation>
     <Declaration>
+        <DataProperty IRI="file:/usr/local/mudrod_ontologies/Type"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAACDataset"/>
     </Declaration>
     <Declaration>
@@ -39,9 +38,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#GCMD-DIF"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="file:/usr/local/mudrod_ontologies/Type"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAACDataset"/>
@@ -88,7 +84,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="file:/usr/local/mudrod_ontologies/Ellipsoid_Name"/>
         <NamedIndividual IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAAC-GHGMR-4FJ01"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">WGS 84</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">WGS 84</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="file:/usr/local/mudrod_ontologies/Northernmost_Latitude"/>
@@ -118,7 +114,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="file:/usr/local/mudrod_ontologies/Type"/>
         <NamedIndividual IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAAC-GHGMR-4FJ01"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">Cylindrical Lat-Lon</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Cylindrical Lat-Lon</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="file:/usr/local/mudrod_ontologies/Type"/>
