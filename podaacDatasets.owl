@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/mudrod/mudrod_ontologies/master/podaacDatasets.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://raw.githubusercontent.com/mudrod/mudrod_ontologies/master/podaacDatasets.owl"
+     versionIRI="https://raw.githubusercontent.com/mudrod/mudrod_ontologies/master/podaacDatasets.owl/0.1">
+    <Prefix name="" IRI="https://raw.githubusercontent.com/mudrod/mudrod_ontologies/master/podaacDatasets.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>file:/usr/local/mudrod_ontologies/dif_v10.2.owl</Import>
+    <Import>http://sweet.jpl.nasa.gov/2.3/reprDataProduct.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0.1</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">podaacDatasets.owl is an extension of the SWEET (http://sweet.jpl.nasa.gov) https://sweet.jpl.nasa.gov/2.3/reprDataProduct.owl#Dataset class which uses the Directory Interchange Format (DIF) content metadata, a specific set of attributes for describing Earth science data. Currently DIF is used at NASA JPL&apos;s PO.DAAC to model oceanographic datasets. The DIF specification provides the data model which we use to described individual instances of https://sweet.jpl.nasa.gov/2.3/reprDataProduct.owl#Dataset.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">https://earthdata.nasa.gov/standards/directory-interchange-format-dif-standard</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">https://github.com/mudrod/mudrod_ontologies</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAACDataset"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAAC-GHGMR-4FJ01"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#GCMD-DIF"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAACDataset"/>
+        <Class IRI="http://sweet.jpl.nasa.gov/2.3/reprDataProduct.owl#Dataset"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://sweet.jpl.nasa.gov/2.3/reprDataModel.owl#DataModel"/>
+        <NamedIndividual IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#GCMD-DIF"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAACDataset"/>
+        <NamedIndividual IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAAC-GHGMR-4FJ01"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://sweet.jpl.nasa.gov/2.3/relaProvenance.owl#hasDataModel"/>
+        <NamedIndividual IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAAC-GHGMR-4FJ01"/>
+        <NamedIndividual IRI="http://mudrod.jpl.nasa.gov/podaacDatasets.owl#GCMD-DIF"/>
+    </ObjectPropertyAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://mudrod.jpl.nasa.gov/podaacDatasets.owl#GCMD-DIF</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">GCMD-DIF is the data model used at NASA JPL&apos;s PO.DAAC to describe Datasets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://mudrod.jpl.nasa.gov/podaacDatasets.owl#GCMD-DIF</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">The Directory Interchange Format (DIF) content metadata is a specific set of attributes for describing Earth science data. From its conception in the late 1980’s as a way to document and exchange information on scientific data to its implementation in the Global Change Master Directory (GCMD), the DIF has evolved to serve the user community in the discovery, access and use of Earth science and related data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://mudrod.jpl.nasa.gov/podaacDatasets.owl#GCMD-DIF</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v10.2.xsd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://mudrod.jpl.nasa.gov/podaacDatasets.owl#GCMD-DIF</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://earthdata.nasa.gov/standards/directory-interchange-format-dif-standard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAAC-GHGMR-4FJ01</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://podaac.jpl.nasa.gov/dataset/JPL-L4UHfnd-GLOB-MUR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAACDataset</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">http://mudrod.jpl.nasa.gov/podaacDatasets.owl#PODAACDataset is a subset of http://sweet.jpl.nasa.gov/2.3/reprDataProduct.owl#Dataset which complies with the NASA Global Change Master Directory Directory Interchange Format (GCMD-DIF) data model described at http://semanticportal.esipfed.org/ontologies/GCMD-DIF</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
