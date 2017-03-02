@@ -7,8 +7,8 @@ This project contains all ontology resources generated through the Mining and Ut
 
 # Introduction
 MUDROD ontologies stem from a number of sources
- * **NASA Directory Interchange Format** (DIF) - defined appropriately [here](http://gcmd.gsfc.nasa.gov/DocumentBuilder/defaultDif10/guide/whatisadif.html), DIF exists primarily as an [XSD](http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v10.2.xsd) however through MUDROD we have created an OWL manifestation which can be found at [dif_v10.2.owl](https://github.com/mudrod/mudrod_ontologies/blob/master/dif_v10.2.owl). The OWL was generated using [ReDeFer](http://rhizomik.net/html/redefer/).
- * ...
+ * **NASA Global Change Master Directory Directory Interchange Format** (GCMD-DIF) - defined appropriately [here](http://gcmd.gsfc.nasa.gov/DocumentBuilder/defaultDif10/guide/whatisadif.html), GCMD-DIF exists primarily as an [XSD](http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v10.2.xsd) however through MUDROD we have created an OWL manifestation which can be found at [dif_v10.2.owl](https://raw.githubusercontent.com/mudrod/mudrod_ontologies/master/podaacDatasets.owl).
+ * **podaacDatasets.owl** - a PO.DAAC-specific extension of the [SWEET reprDataProduct.owl#Dataset](http://sweet.jpl.nasa.gov/2.3/reprDataProduct.owl) concept with the Data property assertions based off of the GCMD-DIF data model provided above. Each PODAACDataset instance (individual) represents a PO.DAAC dataset with the data values being derived from the [PO.DAAC WebServices](https://podaac.jpl.nasa.gov/ws).
 
 # Team members:
 
